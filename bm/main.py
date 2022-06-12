@@ -1,9 +1,7 @@
 # imports
-import re
 from tkinter import *
-import os
-from turtle import st
-from PIL import ImageTk, Image
+import os  # creating and removing a directory (folder), fetching its contents,etc
+from PIL import ImageTk, Image  #contains support to create and modify Tkinter images
 
 # Main Screen
 master = Tk()
@@ -67,7 +65,7 @@ def Register():
     
     
     # Labels
-    Label(register_screen, text="Please Enter the below deatils to register.", font=("calibri", 12)).grid(row=0, sticky=N, pady=10)
+    Label(register_screen, text="Please Enter the below deatils to register.", font=("calibri", 12), bg="#5E88FC").grid(row=0, sticky=N, pady=10)
     Label(register_screen, text="Full Name : ", font=("calibri", 12)).grid(row=1, sticky=W)
     Label(register_screen, text="Mobile Number : ", font=("calibri", 12)).grid(row=2, sticky=W)
     Label(register_screen, text="Account Type(S/C) : ", font=("calibri", 12)).grid(row=3, sticky=W)
@@ -120,7 +118,7 @@ def login_session():
                 Label(account_dashboard).grid(row=5,sticky=N,pady=10)
                 return
             else:
-                login_notif.config(fg="red", text="PAssword Incorrect!")
+                login_notif.config(fg="red", text="Password Incorrect!")
                 return
         
     login_notif.config(fg="red", text="No account Found!")
@@ -141,18 +139,18 @@ def deposit():
     deposit_scrren.title("Deposit")
     
     # Label
-    Label(deposit_scrren, text="Deposit", font=("calibri", 12)).grid(row=0, sticky="NESW", pady=10)
+    Label(deposit_scrren, text="DEPOSIT",bg="#5E88FC",width="30", font=("calibri", 12)).grid(row=0, sticky="NESW", pady=10)
     current_balance_label = Label(deposit_scrren, text="Current Balance : ₹"+ details_balance, font=("calibri",12))
     current_balance_label.grid(row=1, sticky=W)
     Label(deposit_scrren, text="Amount : ₹", font=("calibri",12)).grid(row=2,sticky=W)
-    deposit_notify = Label(deposit_scrren, font=("calibri",12))
-    deposit_notify.grid(row=4, sticky=N, pady=5)
+    deposit_notif = Label(deposit_scrren, font=("calibri",12))
+    deposit_notif.grid(row=4, sticky=N, pady=5)
     
     # ENtry
-    Entry(deposit_scrren, textvariable=amount).grid(row=2,column=1)
+    Entry(deposit_scrren, textvariable=amount).place(x=80, y=75)
     
     # Button
-    Button(deposit_scrren, text="Update", font=("calibri", 12), command = finish_deposit).grid(row=3, sticky=W, pady=5)
+    Button(deposit_scrren, text="Update", font=("calibri", 12),width="20", command = finish_deposit).grid(row=3, sticky=N, pady=5)
 
 def finish_deposit():
     if amount.get() =="":
@@ -193,18 +191,17 @@ def withdraw():
     withdraw_scrren.title("withdraw")
     
     # Label
-    Label(withdraw_scrren, text="withdraw", font=("calibri", 12)).grid(row=0, sticky="NESW", pady=10)
+    Label(withdraw_scrren, text="WITHDRAW",bg="#5E88FC",width="30", font=("calibri", 12)).grid(row=0, sticky="NESW", pady=10)
     current_balance_label = Label(withdraw_scrren, text="Current Balance : ₹"+ details_balance, font=("calibri",12))
     current_balance_label.grid(row=1, sticky=W)
     Label(withdraw_scrren, text="Amount : ₹", font=("calibri",12)).grid(row=2,sticky=W)
-    withdraw_notify = Label(withdraw_scrren, font=("calibri",12))
-    withdraw_notify.grid(row=4, sticky=N, pady=5)
+    withdraw_notif = Label(withdraw_scrren, font=("calibri",12))
+    withdraw_notif.grid(row=4, sticky=N, pady=5)
     
     # ENtry
-    Entry(withdraw_scrren, textvariable=withdraw_amount).grid(row=2,column=1)
-    
+    Entry(withdraw_scrren, textvariable=withdraw_amount).place(x=80, y=75)
     # Button
-    Button(withdraw_scrren, text="Update", font=("calibri", 12), command = finish_withdraw).grid(row=3, sticky=W, pady=5)
+    Button(withdraw_scrren, text="Update", width="20",font=("calibri", 12), command = finish_withdraw).grid(row=3, sticky=N, pady=5)
     
     
 def finish_withdraw():
@@ -278,20 +275,22 @@ def login():
     login_screen.title("Login")
     
     # Labels
-    Label(login_screen, text="Login to your account", font =("calibri", 12)).grid(row=0, sticky=N, pady=10)
-    Label(login_screen, text="Username", font =("calibri", 12)).grid(row=1, sticky=W)
-    Label(login_screen, text="Password", font =("calibri", 12)).grid(row=2, sticky=W)
+    Label(login_screen, text="Login to your account", font =("calibri", 12),bg="#5E88FC",width=30).grid(row=0, sticky="NESW", pady=10)
+    Label(login_screen, text="Username :", font =("calibri", 12)).grid(row=1, sticky=W)
+    Label(login_screen, text="Password :", font =("calibri", 12)).grid(row=2, sticky=W)
     login_notif = Label(login_screen, font=("calibri", 12))
     login_notif.grid(row=4, sticky=N)
     
     # Entry
-    Entry(login_screen, textvariable=temp_login_name).grid(row=1,column=1,padx=5)
-    Entry(login_screen, textvariable=temp_login_password,show="*").grid(row=2,column=1,padx=5)
-    
+    Entry(login_screen, textvariable=temp_login_name).place(x=80,y=50)
+    Entry(login_screen, textvariable=temp_login_password,show="*").place(x=80,y=75)
     # Button
     Button(login_screen, text = "Login", font =("calibri",12),command=login_session,width=15).grid(row=3,sticky=N,pady=5,padx=5)
+
+
     
 # Image Imports
+
 img = Image.open('Images/Bank.jpg')
 img = img.resize((300,187))
 img = ImageTk.PhotoImage(img)
