@@ -42,33 +42,35 @@ Option 2
 Features of program
 This is a GUI-based program. Once started running, it will prompt users to ask whose role they want to play. According to the selection, the program will ask for credentials. Once the credentials are matched, the program will unlock the respective functions
 
-1) Register
->> Can create a new account
-> Functionalities:
-                 1. Create bank account
-                    - Account type
-                    - Name
-                    - Gender
-                    - Nationality
-                    - PIN
-                    - DOB
-                    - Mobile number
-                    - Initial account balance
-                    Above mentioned details are typed into the form.
-                 
-                 
+1) Register          
 2) Login            
->> Customer account name and PIN should be entered
-> If account name and PIN matches then customer will unlock his/her
-functionalities. If they don’t match or entered account number doesn't exist then appropriate error prompts are displayed.
-> Functionalities:
-                 1. Deposit
-                    balance is updated with the new amount.
-                    - Valid amount i.e., amount cannot be negative and zero
-                    If above criteria are satisfied then amount is deposited
-                 2. Withdraw
-                    - Valid amount i.e., amount cannot be greater than total balance, negative or zero is not allowed
-                    - If above criteria are satisfied then amount is withdrawn
-                 3. Check your balance
-                    - On pressing this button, the total balance of customer
-                 
+3) In Register, A new user is created by filling required Docs
+4) After Login, we go to Dashboard in which we can have functionalities like i) Personal Details
+                                                                            ii) Deposit
+                                                                           iii) Withdraw.
+                                                                           
+Images 
+
+
+<img width="287" alt="1" src="https://user-images.githubusercontent.com/97172146/200278744-35e5e2d4-8bb3-425b-90ce-a4005584e557.png">
+
+
+<img width="262" alt="2" src="https://user-images.githubusercontent.com/97172146/200278772-ed1354bc-1cbb-4139-b7a3-bff36b2e949c.png">
+
+
+<img width="232" alt="3" src="https://user-images.githubusercontent.com/97172146/200279012-14aef243-f504-484f-a88b-c0b5a8696212.png">
+
+
+<img width="302" alt="4" src="https://user-images.githubusercontent.com/97172146/200279031-b7625f87-a3ad-4fc9-b331-370a17443f09.png">
+
+
+<img width="280" alt="5" src="https://user-images.githubusercontent.com/97172146/200279062-14d0c4fe-0ea8-4fe5-b789-b633e43f9ddd.png">
+
+
+<img width="236" alt="6" src="https://user-images.githubusercontent.com/97172146/200279090-cb3352d6-2956-4428-b0f2-c13cb23e1a0b.png">
+
+
+<img width="226" alt="7" src="https://user-images.githubusercontent.com/97172146/200279125-72755a91-6547-4439-a648-f1d0b60d4933.png">
+
+
+<img width="398" alt="8" src="https://user-images.githubusercontent.com/97172146/200279165-1f782365-3763-457d-996f-976d440940b7.png">
